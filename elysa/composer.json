@@ -1,0 +1,44 @@
+{
+  "name": "stupidlysimple/elysa",
+  "description": "Console utility for managing StupidlySimple framework installations",
+  "keywords": [
+    "micro framework",
+    "lazy",
+    "stupidlysimple",
+    "php framework",
+    "php elysa",
+    "elysa"
+  ],
+  "type": "project",
+  "require": {
+    "php": ">=5.6"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Fariz Luqman",
+      "email": "fariz.fnb@gmail.com",
+      "homepage": "https://stupidlysimple.github.io",
+      "role": "Developer"
+    }
+  ],
+  "config": {
+    "vendor-dir": "vendor"
+  },
+  "minimum-stability": "stable",
+  "extra": {
+    "phar-builder": {
+      "compression": "GZip",
+      "name": "elysa.phar",
+      "output-dir": "../",
+      "entry-point": "index.php",
+      "include-dev": false,
+      "skip-shebang": true,
+      "events": {
+        "build.after": [
+          "chmod +x ../elysa.phar"
+        ]
+      }
+    }
+  }
+}
