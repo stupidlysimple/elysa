@@ -1,4 +1,5 @@
 vendor/*
 .idea/*
 .zedstate
-Phar-builder.phar
+phar-builder.phar
+elysa.phar
