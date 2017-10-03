@@ -26,19 +26,18 @@
     "vendor-dir": "vendor"
   },
   "minimum-stability": "stable",
+  "bin": ["bin/elysa", "bin/elysa.php"],
+  "autoload": {
+    "psr-4": {
+      "Core\\": "app/"
+    }
+  },
   "extra": {
     "phar-builder": {
       "compression": "GZip",
       "name": "elysa.phar",
       "output-dir": "../",
-      "entry-point": "index.php",
-      "include-dev": false,
-      "skip-shebang": true,
-      "events": {
-        "build.after": [
-          "chmod +x ../elysa.phar"
-        ]
-      }
+      "entry-point": "bin/elysa.php"
     }
   }
 }
