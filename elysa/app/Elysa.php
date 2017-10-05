@@ -10,7 +10,7 @@ use Core\Helper\System;
  */
 class Elysa
 {
-    private static $operatingSystem = "UNKNOWN";
+    private static $operatingSystem;
     private $halt = false;
 
     /**
@@ -112,6 +112,12 @@ class Elysa
             case 'model':
             case 'Model':
                 Commands\Model::applyCommand($argv[$i + 1], $argv, $i + 1);
+                $this->setHalt();
+                break;
+            case 'database':
+            case 'Database':
+                Commands\Database::applyCommand($argv[$i + 1], $argv, $i + 1);
+                $this->setHalt();
                 break;
         }
     }

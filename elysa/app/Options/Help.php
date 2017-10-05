@@ -78,6 +78,8 @@ class Help
         echo "Update the composer.lock, and all framework dependencies to the \n\t\t\tlatest version\n";
         echo $c->gcs("  upgrade\t\t", "green");
         echo "Upgrade the framework to the latest version (use with --set-version\n\t\t\tor -v for version < 0.5)\n";
+        echo $c->gcs("  package\t\t", "green");
+        echo "Install or manage packages for your StupidlySimple framework\n";
         echo $c->gcs("  database\t\t", "green");
         echo "Create or manage the database \n";
         echo $c->gcs("  controller\t\t", "green");
